@@ -1,0 +1,7 @@
+<p>api-poke works!</p>
+@for (item of apiPoke.poke(); track $index) {
+    <div class="bg-black">
+        <img [srcset]="item.url"t="" class="w-24 h-24 shadow-md rotate-2">
+        <h4 class="">{{item.name}}</h4>
+    </div>
+} 

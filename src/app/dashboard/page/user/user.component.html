@@ -1,0 +1,11 @@
+<app-title/>
+
+<h1>{{saludar.saludar()}}</h1>
+<h1>{{saludar.dias}}</h1>
+<div>
+    @for (item of saludar.saludar(); track $index ; let f =$even)  {
+       <div [ngClass]="f? 'bg-slate-500':'bg-red-400'">
+        <h1 class=" f bg-lime-600, bg-white  text-center border-spacing-3 even:">{{item}} </h1>
+    </div>
+    }
+</div>

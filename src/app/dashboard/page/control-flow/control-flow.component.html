@@ -1,0 +1,47 @@
+<app-title titulo="Control Flow"/>
+<app-title titulo="lllll"/>
+<div [ngClass]="true? 'bg-black text-yellow-400':'text-black'">
+fdsfsd</div>
+
+
+    <div [ngStyle]="{'color': !true ? 'red' : 'orange' }" class="text-gray-200">
+        fdsfsd
+    </div>
+<input type="range" min="0" max="10" [(ngModel)]="valor" />    
+ <h1>{{valor}}</h1>
+<section class="bg-white text-center">
+    <div>
+        <h1>if{{showSignal()}}</h1>
+    </div>
+    <div>
+        <button
+        (click)="updateSigna()"
+        >Click ME!</button>
+    </div>
+    <div>
+        @if(showSignal()){
+            <h1>Hola mundos</h1>
+        }
+        @else {
+             <h1>***********</h1>
+        }
+    </div>
+</section>
+<section class="bg-white text-center">
+    <div>
+       @switch (grade()) {
+        @case ('A') {
+            <div>Aprovado</div>
+        }
+        @case ('B') {
+            <div>Bueno</div>
+        }
+        @case ('F') {
+            <div>porco</div>
+        }
+        @default {
+            <div>Reprodvado</div>
+        }
+       }
+    </div>
+</section>

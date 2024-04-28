@@ -1,0 +1,16 @@
+<h1>Usuarios</h1>
+<app-title titulo="Usuarios"></app-title>
+<div>
+    {{serviceUser}}
+    @for (item of serviceUser.users(); track $index;let f=$even) {
+        <div [ngClass]="f? 'bg-slate-500':'bg-orange-400'" class="flex justify-start">
+        <img [srcset]="item.avatar" [alt]="item.first_name">
+      <a [routerLink]="['/dashboard/user',item.id]">
+        {{item.first_name}} {{item.last_name}}
+      </a>
+        
+    </div>
+    }@empty {
+        <h1>cargando ...</h1>
+    }
+</div>
